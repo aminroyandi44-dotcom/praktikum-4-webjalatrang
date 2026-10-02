@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Teko:wght@300..700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: clip;
+}
+.teko {
+    font-family: "Teko", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ── Topbar ── */
+.topbar {
+    background: #0f172a;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.78rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.topbar-badge {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+.news-flash-wrapper { overflow: hidden; white-space: nowrap; flex: 1; }
+.news-flash-scroll { display: inline-block; animation: scrollLeft 30s linear infinite; }
+.news-flash-scroll:hover { animation-play-state: paused; }
+@keyframes scrollLeft {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ── Navbar ── */
+.navbar-publik.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 6px 0;
+}
+.brand-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.brand-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+.navbar-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+}
+.brand-desa-text { line-height: 1.1; }
+
+.navbar-publik .nav-link {
+    color: rgba(255, 255, 255, 0.88);
+    font-family: 'Teko', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    padding: 4px 10px !important;
+    margin: 0 1px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+.navbar-publik .nav-link:hover {
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.22);
+    border-color: rgba(245, 158, 11, 0.4);
+    transform: translateY(-1px);
+}
+.navbar-publik .nav-link.active {
+    color: #fbbf24;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(239, 68, 68, 0.25));
+    border-color: rgba(245, 158, 11, 0.5);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+.navbar-publik .nav-home-pill {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.35);
+    color: #f87171;
+}
+.navbar-publik .nav-home-pill:hover {
+    background: rgba(239, 68, 68, 0.35);
+    border-color: rgba(239, 68, 68, 0.6);
+    color: #fff;
+}
+.navbar-publik .dropdown-menu {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 6px;
+    min-width: 230px;
+}
+.navbar-publik .dropdown-item {
+    color: #f8fafc;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.navbar-publik .dropdown-item:hover {
+    background: #1e293b;
+    color: #fbbf24;
+    padding-left: 20px;
+    font-weight: 700;
+}
+@media (min-width: 992px) {
+    .navbar-publik .nav-item.dropdown:hover > .dropdown-menu { display: block; margin-top: 0; }
+    .navbar-publik .dropdown-toggle::after { display: none; }
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .navbar-publik .nav-link { font-size: 1.02rem; padding: 4px 7px !important; }
+    .brand-box { padding: 3px 8px; }
+    .brand-desa-text .teko { font-size: 1.15rem !important; }
+    .navbar-logo { width: 28px; height: 28px; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-publik .nav-link { font-size: 0.92rem; padding: 3px 5px !important; margin: 0; }
+    .brand-desa-text .teko { font-size: 1.05rem !important; }
+}
+.btn-top-layanan-grid {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.22rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(245, 158, 11, 0.08);
+    transition: all 0.25s ease;
+}
+.btn-top-layanan-grid:hover {
+    border-color: #fbbf24;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 16px rgba(245, 158, 11, 0.4);
+    transform: translateY(-1px);
+}
+.navbar-publik .navbar-toggler {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.navbar-publik .navbar-toggler-icon { width: 18px; height: 18px; filter: invert(1); }
+
+/* ── Header halaman ── */
+.page-hero { background: linear-gradient(135deg, #0f3460, #1a1a6e); }
+.breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.6); }
+
+/* ── Kartu berita ── */
+.card-berita {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-berita:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+.card-berita .thumb { height: 160px; overflow: hidden; }
+.card-berita .thumb img { object-fit: cover; transition: transform 0.4s; }
+.card-berita .thumb img:hover { transform: scale(1.08); }
+.bg-desa { background: #0f3460; }
+.article-body { font-size: 1rem; line-height: 1.85; color: #333; }
+
+/* ── Footer ── */
+.footer-dark {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: rgba(255,255,255,0.8);
+}
+.footer-dark h5 { color: #ffd700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.footer-dark a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; }
+.footer-dark a:hover { color: #ffd700; }
+.footer-bottom {
+    background: rgba(0,0,0,0.3);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ── Scroll to top ── */
+#scrollTop {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 42px; height: 42px;
+    background: #0f3460; color: #ffd700;
+    border: none; border-radius: 50%;
+    font-size: 1.1rem; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0; transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(20px);
+    z-index: 1040;
+}
+#scrollTop.visible { opacity: 1; transform: translateY(0); }
+#scrollTop:hover { background: #ffd700; color: #0f3460; }
